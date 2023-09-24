@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Formulário de Login"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_unis" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/logoImageView"
+        android:layout_marginTop="16dp"
+        android:hint="Nome de usuário" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Senha"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button"
+        android:text="Login" />
+
+    <LinearLayout
+        android:id="@+id/loginOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/signupLinkTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:text="Cadastre-se"
+            android:textColor="@color/light_blue"
+            android:textAlignment="center"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/forgotPasswordLinkTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:text="Esqueceu sua senha?"
+            android:textColor="@color/light_blue"
+            android:textAlignment="center"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/termsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginOptions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Termos de Uso"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/termsContentScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="116dp"
+        android:layout_below="@id/termsTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/termsContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="© 2023 - @NomeDaEmpresa\n\nEsse é o termo da empresa que ninguém lê mas que deveria ser lido por todos...\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius vehicula sapien in mattis. Donec rutrum pellentesque sapien a interdum. Duis placerat purus et nibh ultrices finibus. Curabitur varius facilisis felis ac gravida. Etiam pellentesque velit at accumsan porta. Pellentesque id mauris convallis, dignissim ligula sit amet, mattis ante. Curabitur elementum tellus a posuere porttitor. Nam laoreet eu tellus sed facilisis. Integer aliquet at nisl at placerat. Vivamus in metus posuere, pharetra nisi id, ornare enim. Mauris vehicula massa vitae sapien faucibus rhoncus."
+            android:textSize="12sp" />
+
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/termsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/termsContentScrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Aceito os Termos de Uso"
+        android:textSize="12sp" />
+
+</RelativeLayout>
